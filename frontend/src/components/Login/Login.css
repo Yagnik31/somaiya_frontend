@@ -1,0 +1,92 @@
+/* General container styling for the login form */
+.login-container {
+    min-width: 100%;
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 100%;
+    min-height: 100vh;
+    background-image: url('https://assets.collegedunia.com/public/college_data/images/appImage/1598610387unnamed.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.9;
+  }
+  
+  /* Adjusting the logo */
+  .logo {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  /* Heading */
+  h1 {
+    color: #8b0000;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Styling for the form */
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  /* Input fields */
+  input {
+    margin-bottom: 1.25rem;
+    padding: 12px;
+    border: 2px solid #dadce0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #8b0000;
+  }
+  
+  /* Submit button */
+  button {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+  }
+  
+  button:hover {
+    background-color: #630000;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: #8b0000;
+    font-size: 14px;
+    margin-top: 12px;
+    text-align: center;
+  }
+  

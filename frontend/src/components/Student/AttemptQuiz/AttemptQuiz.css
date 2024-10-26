@@ -1,0 +1,128 @@
+
+/* header {
+    background-color: #fcf8ed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+} */
+
+.logo-left, .logo-right {
+    height: 60px;
+}
+
+.logo-left img, .logo-right img {
+    height: 100%;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 48px;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.timer {
+    font-size: 36px; /* Timer size */
+    color: #8b0000; /* Dark red color */
+    font-weight: bold;
+    margin-top: 20px; /* Space above timer */
+}
+
+.quiz-container {
+    background-color: #ffffff; /* White background for quiz */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+/* Progress bar styling */
+.progress-bar-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #8b0000; /* Dark red */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* Submit button */
+.submit-btn {
+    display: block;
+    margin: 20px auto 0 auto;
+    padding: 10px 20px;
+    background-color: #8b0000; /* Dark red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #a00000; /* Lighter red on hover */
+}
+
+.result {
+    margin-top: 20px;
+}
+
+/* Custom styling for the quiz options */
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light gray background */
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+label:hover {
+    background-color: #e0e0e0; /* Darker gray on hover */
+}
+
+.progress-bar-container {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #f3f3f3;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 20px;
+    background-color: #8b0000; /* Dark red */
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+}

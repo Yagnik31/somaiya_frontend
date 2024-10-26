@@ -1,0 +1,28 @@
+.result-container_main{
+    background: url('https://assets.collegedunia.com/public/college_data/images/appImage/1598610387unnamed.jpg');;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.result-container {
+    background-color: white;
+    background: url('');
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+}
+.score {
+ 
+    color: #8b0000;
+}
+.answer-key {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.answers-list{
+    list-style-type:disc;
+    
+}

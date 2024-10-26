@@ -1,0 +1,198 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+}
+header {
+    background-color: #fcf8ed;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-left, .logo-right {
+    height: 60px;
+}
+.logo-left img, .logo-right img {
+    height: 100%;
+}
+
+.header-title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 48px;
+    color: #8b0000;
+    font-weight: bold;
+}
+
+.main-container {
+    display: flex;
+    height: calc(100vh - 80px);
+}
+.sidebar {
+    width: 150px;
+    background-color: #8b0000;
+    color: white;
+    padding: 20px;
+}
+.sidebar-option {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.sidebar-option:hover {
+    background-color: #a50000;
+}
+main {
+    flex-grow: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+.class-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.class-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    position: relative;
+}
+.class-card:hover {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.class-header {
+    height: 120px;
+    background-color: #8b0000;
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: flex-end;
+}
+.class-body {
+    padding: 20px;
+}
+.class-code {
+    font-size: 16px;
+    color: #5f6368;
+    margin-bottom: 15px;
+}
+.class-notes {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #3c4043;
+}
+.action-btn {
+    background-color: #8b0000;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+.action-btn:hover {
+    background-color: #a50000;
+}
+.action-btn:active {
+    transform: scale(0.98);
+}
+/* 3 dots menu for deleting a class */
+.three-dots {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.three-dots-menu {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 100;
+    width: 100px;
+}
+.three-dots-menu a {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+}
+.three-dots-menu a:hover {
+    background-color: #ddd;
+}
+/* Modal Styling */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 40px;
+    border: 1px solid #888;
+    width: 30%;
+    border-radius: 30px;
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Confirmation Dialog */
+.confirm-dialog {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.confirm-dialog button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.confirm-dialog .confirm {
+    background-color: #8b0000;
+    color: white;
+}
+.confirm-dialog .cancel {
+    background-color: #ddd;
+}
