@@ -77,25 +77,31 @@ const AttemptQuiz = () => {
   // Submit quiz and calculate the score
   const handleSubmitQuiz = () => {
     let userScore = 0;
-    const userAnswers = []; // Array to hold user's answers
-
+    const correctAnswers = []; // Array to hold correct answers
+  
     questions.forEach((question, index) => {
-      const selectedOption = document.querySelector(
+      const correctAnswer = question.correctAnswer.replace(/\*\*$/, ""); // Remove '**' from the correct answer
+      const selectedAnswerElement = document.querySelector(
         `input[name="question-${index}"]:checked`
       );
-      const correctAnswer = question.correctAnswer.replace(/\*\*$/, ""); // Remove '**' from the correct answer
-
-      // Store user's answer or null if none selected
-      userAnswers.push(selectedOption ? selectedOption.value : null);
-
-      if (selectedOption && selectedOption.value === correctAnswer) {
+      const selectedAnswer = selectedAnswerElement
+        ? selectedAnswerElement.value
+        : null;
+  
+      // Store the correct answer
+      correctAnswers.push(correctAnswer);
+  
+      // Compare the user's selected answer with the correct answer
+      if (selectedAnswer === correctAnswer) {
         userScore++;
       }
     });
-
-    // Redirect to results page with score, total questions, and answers
-    const encodedAnswers = encodeURIComponent(JSON.stringify(userAnswers));
-    window.location.href = `/results?score=${userScore}&total=${questions.length}&answers=${encodedAnswers}`;
+  
+    // Redirect to results page with score, total questions, and correct answers
+    const encodedCorrectAnswers = encodeURIComponent(
+      JSON.stringify(correctAnswers)
+    );
+    window.location.href = `/results?score=${userScore}&total=${questions.length}&answers=${encodedCorrectAnswers}`;
   };
 
   // Handle time up (for the timer)
